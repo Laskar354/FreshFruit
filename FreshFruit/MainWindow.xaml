@@ -1,0 +1,36 @@
+﻿<Window x:Class="FreshFruit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FreshFruit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="71,38,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="71,89,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonAddAnggur" Content="Add" HorizontalAlignment="Left" Margin="111,376,0,0" VerticalAlignment="Top" Click="OnButtonAddAnggur"/>
+        <Button x:Name="ButtonAddApple" Content="Add" HorizontalAlignment="Left" Margin="283,376,0,0" VerticalAlignment="Top" Click="OnButtonAddAppleClicked"/>
+        <Button x:Name="ButtonAddBanana" Content="Add" HorizontalAlignment="Left" Margin="453,376,0,0" VerticalAlignment="Top" Click="OnButtonAddBananaClicked"/>
+        <Button x:Name="ButtonAddOrange" Content="Add" HorizontalAlignment="Left" Margin="636,376,0,0" VerticalAlignment="Top" Click="OnButtonAddOrangeClicked"/>
+        <Label Content="Keranjang
+" HorizontalAlignment="Left" Margin="576,7,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="ListBoxBucked" Margin="453,38,34,226">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding name}" TextAlignment="Left"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Image Margin="67,260,605,63" Stretch="Fill" Source="/Assets/anggur.jpg"/>
+        <Image Margin="268,276,448,63" Stretch="Fill" Source="/Assets/apple.png"/>
+        <Image Margin="427,270,274,63" Stretch="Fill" Source="/Assets/banana.jpg"/>
+        <Image Margin="592,244,80,63" Stretch="Fill" Source="/Assets/orange.png"/>
+
+    </Grid>
+</Window>
